@@ -8,11 +8,10 @@ namespace ResolverEcuacionCuadratica
 {
     public class CalcularRaices
     {
-        public void CalcularLasRaices(double discriminante, double primerNumero, double segundoNumero,
-                                  double tercerNumero, ref double primeraRaiz, ref double segundaRaiz)
+        public void CalcularLasRaices(EspecificarVariables variables)
         {
-            primeraRaiz = (-segundoNumero + Math.Sqrt(discriminante)) / (2 * primerNumero);
-            segundaRaiz = (-segundoNumero - Math.Sqrt(discriminante)) / (2 * primerNumero);
+            variables.setPrimeraRaiz ((-variables.getSegundoNumero() + Math.Sqrt(variables.getDiscriminante())) / (2 * variables.getPrimerNumero()));
+            variables. setSegundaRaiz ((-variables.getSegundoNumero() - Math.Sqrt(variables.getDiscriminante())) / (2 * variables.getPrimerNumero()));
         }
     }
 }

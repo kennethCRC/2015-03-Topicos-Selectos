@@ -8,10 +8,10 @@ namespace ResolverEcuacionCuadratica
 {
      public class ValidarDiscriminante
     {
-        public bool ValidarElDiscriminanteMayorQueCero (double discriminante)
+        public bool ValidarElDiscriminanteMayorQueCero (EspecificarVariables variables)
         {
             bool resultado = false;
-            resultado = (discriminante >= 0);
+            resultado = (variables.getDiscriminante() >= 0);
             return resultado;
         }
     }

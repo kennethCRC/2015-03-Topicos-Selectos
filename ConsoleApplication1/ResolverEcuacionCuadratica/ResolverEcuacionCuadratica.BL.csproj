@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Acciones\CalcularDiscriminante.cs" />
     <Compile Include="Acciones\CalcularRaices.cs" />
+    <Compile Include="Especificaciones\EspecificarVariables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Especificaciones\ResolverEcuacionCuadratica.cs" />
     <Compile Include="Validaciones\ValidarDiscriminante.cs" />

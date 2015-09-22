@@ -8,28 +8,25 @@ namespace ResolverEcuacionCuadratica
 {
     class ResolverEcuacionCuadratica
     {
-        public void ResolverLaEcuacionCuadratica(double primerNumero, double segundoNumero,
-                             double tercerNumero,ref double primeraRaiz, ref double segundaRaiz)
+        public void ResolverLaEcuacionCuadratica(EspecificarVariables variables)
         {
             //calcular el discriminante
             CalcularDiscriminante accCalcularDiscriminante = new CalcularDiscriminante();
-            double discriminante = accCalcularDiscriminante.CalcularElDiscriminante(
-                                            primerNumero, segundoNumero, tercerNumero);
+            variables.setDiscriminante (accCalcularDiscriminante.CalcularElDiscriminante(variables));
             //validar el discriminante
             ValidarDiscriminante validarDiscriminante = new ValidarDiscriminante();
-            if (validarDiscriminante.ValidarElDiscriminanteMayorQueCero(discriminante))
+            if (validarDiscriminante.ValidarElDiscriminanteMayorQueCero(variables))
             {
 
                 //calcular las raices
                 CalcularRaices calcularRaices = new CalcularRaices();
-                calcularRaices.CalcularLasRaices(discriminante, primerNumero, segundoNumero,
-                                                 tercerNumero, ref primeraRaiz, ref segundaRaiz);
+                calcularRaices.CalcularLasRaices(variables);
             }
             else
             //levante una excepción
             {
                 Exception ex = new Exception(string.Format("Ocurrió un error al calcular las raices," + 
-                            " ya que el discriminante [{0}] es menor que cero", discriminante.ToString()));
+                            " ya que el discriminante [{0}] es menor que cero", variables.getDiscriminante().ToString()));
                 throw ex;
             }
         }

@@ -8,11 +8,10 @@ namespace ResolverEcuacionCuadratica
 {
     public class CalcularDiscriminante
     {
-        public double CalcularElDiscriminante(double primerNumero, double segundoNumero,
-                                        double tercerNumero)
+        public double CalcularElDiscriminante(EspecificarVariables variables)
         {
             double resultado = 0;
-            resultado = (Math.Pow(segundoNumero, 2) - 4 * primerNumero * tercerNumero);
+            resultado = (Math.Pow(variables.getSegundoNumero(), 2) - 4 * variables.getPrimerNumero() * variables.getTercerNumero());
             return (resultado);
         }
     }
