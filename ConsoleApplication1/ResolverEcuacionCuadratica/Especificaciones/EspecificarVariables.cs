@@ -8,13 +8,14 @@ namespace ResolverEcuacionCuadratica
 {
     public class EspecificarVariables
     {
-       
-            double primerNumero = 0;
-            double segundoNumero = 0;
-            double tercerNumero = 0;
-            double discriminante = 0;
-            double primeraRaiz = 0;
-            double segundaRaiz = 0;
+        double primerNumero = 0;
+        double segundoNumero = 0;
+        double tercerNumero = 0;
+        double discriminante = 0;
+        double primeraRaiz = 0;
+        double segundaRaiz = 0;
+        
+            
 
         public void setPrimerNumero (double num)
         {

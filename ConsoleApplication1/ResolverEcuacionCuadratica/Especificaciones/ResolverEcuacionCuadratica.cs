@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ResolverEcuacionCuadratica
 {
-    class ResolverEcuacionCuadratica
+    public class ResolverEcuacionCuadratica
     {
         public void ResolverLaEcuacionCuadratica(EspecificarVariables variables)
         {
